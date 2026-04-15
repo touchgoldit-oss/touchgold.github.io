@@ -9,74 +9,99 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #000;
-    color: #fff;
+    background: #ffffff;
+    color: #222;
 }
 
 header {
     text-align: center;
-    padding: 30px;
-    background: black;
+    padding: 40px 20px;
+    background: white;
+    border-bottom: 2px solid gold;
 }
 
 header img {
-    width: 150px;
+    width: 140px;
 }
 
 h1 {
-    color: gold;
+    color: #d4af37;
     margin: 10px 0;
 }
 
 .tagline {
-    color: #ccc;
+    color: #777;
     font-style: italic;
 }
 
+nav {
+    text-align: center;
+    padding: 15px;
+    background: #fff;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #d4af37;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 section {
-    padding: 50px;
+    padding: 60px 20px;
     text-align: center;
 }
 
 .about {
-    background: #111;
+    background: #fafafa;
 }
 
 .products {
-    background: #000;
+    background: #fff;
 }
 
 .products img {
-    width: 200px;
+    width: 220px;
     margin: 15px;
-    border-radius: 10px;
-    border: 2px solid gold;
+    border-radius: 12px;
+    border: 2px solid #d4af37;
+    transition: 0.3s;
+}
+
+.products img:hover {
+    transform: scale(1.05);
 }
 
 .contact {
-    background: #111;
+    background: #fafafa;
 }
 
 button {
-    background: gold;
+    background: #d4af37;
+    color: white;
     border: none;
     padding: 12px 25px;
     font-size: 16px;
     cursor: pointer;
     margin-top: 10px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #b8962e;
 }
 
 footer {
-    background: black;
+    background: #fff;
     text-align: center;
     padding: 20px;
     font-size: 14px;
-    color: #aaa;
+    color: #888;
+    border-top: 1px solid #ddd;
 }
 
 a {
-    color: gold;
-    text-decoration: none;
+    color: #d4af37;
 }
 </style>
 </head>
@@ -85,28 +110,35 @@ a {
 
 <header>
     <img src="logo.png" alt="Touch Gold Logo">
-    <h1>Touch Gold</h1>
+    <h1>Touch Gold Diamond Jewellery</h1>
     <p class="tagline">Reliable Luxury, Every Time</p>
 </header>
 
-<section class="about">
+<nav>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about" class="about">
     <h2>About Us</h2>
-    <p>Touch Gold Diamond Jewellery offers premium quality 925 silver and diamond jewellery designed for elegance, luxury, and everyday wear.</p>
+    <p>We offer premium quality diamond and silver jewellery designed for elegance, luxury, and daily wear. Touch Gold represents trust, quality, and timeless beauty.</p>
 </section>
 
-<section class="products">
+<section id="products" class="products">
     <h2>Our Products</h2>
     <img src="product1.jpg">
     <img src="product2.jpg">
     <img src="product3.jpg">
 </section>
 
-<section class="contact">
+<section id="contact" class="contact">
     <h2>Contact Us</h2>
     <p>Email: info.touchgold@gmail.com</p>
-    <p>WhatsApp: +319328630010</p>
+    <p>WhatsApp: +91 9328630010</p>
 
-    <button onclick="window.location.href='https://wa.me/319328630010'">
+    <button onclick="window.location.href='https://wa.me/919328630010'">
         Chat on WhatsApp
     </button>
 
