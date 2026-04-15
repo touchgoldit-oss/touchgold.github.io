@@ -8,132 +8,165 @@
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     background: #ffffff;
-    color: #222;
+    color: #333;
 }
 
+/* HEADER */
 header {
     text-align: center;
-    padding: 40px 20px;
-    background: white;
-    border-bottom: 2px solid gold;
+    padding: 20px;
 }
-
 header img {
-    width: 140px;
+    width: 120px;
 }
 
-h1 {
-    color: #d4af37;
-    margin: 10px 0;
+/* BANNER */
+.banner {
+    width: 100%;
+    height: 300px;
+    background: url('banner.jpg') center/cover no-repeat;
 }
 
-.tagline {
-    color: #777;
-    font-style: italic;
+/* FEATURES */
+.features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px;
 }
-
-nav {
-    text-align: center;
-    padding: 15px;
-    background: #fff;
-}
-
-nav a {
-    margin: 0 15px;
-    color: #d4af37;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.about {
-    background: #fafafa;
-}
-
-.products {
-    background: #fff;
-}
-
-.products img {
-    width: 220px;
+.feature {
+    width: 300px;
     margin: 15px;
-    border-radius: 12px;
-    border: 2px solid #d4af37;
-    transition: 0.3s;
+    text-align: center;
+}
+.feature img {
+    width: 100%;
+    border-radius: 10px;
 }
 
-.products img:hover {
-    transform: scale(1.05);
+/* PRODUCTS */
+.products {
+    text-align: center;
+    padding: 40px;
+}
+.product-box {
+    display: inline-block;
+    margin: 15px;
+}
+.product-box img {
+    width: 200px;
+    border-radius: 10px;
+}
+.product-box h3 {
+    margin-top: 10px;
 }
 
+/* SLIDER */
+.slider {
+    width: 100%;
+    overflow: hidden;
+}
+.slide-track {
+    display: flex;
+    animation: scroll 10s linear infinite;
+}
+.slide-track img {
+    width: 200px;
+    margin: 10px;
+}
+@keyframes scroll {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-50%);}
+}
+
+/* CONTACT */
 .contact {
-    background: #fafafa;
+    text-align: center;
+    padding: 40px;
+    background: #f5f5f5;
 }
-
 button {
-    background: #d4af37;
-    color: white;
+    background: gold;
     border: none;
     padding: 12px 25px;
-    font-size: 16px;
     cursor: pointer;
-    margin-top: 10px;
-    border-radius: 5px;
 }
 
-button:hover {
-    background: #b8962e;
-}
-
+/* FOOTER */
 footer {
-    background: #fff;
     text-align: center;
-    padding: 20px;
-    font-size: 14px;
-    color: #888;
-    border-top: 1px solid #ddd;
-}
-
-a {
-    color: #d4af37;
+    padding: 15px;
+    background: #eee;
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
-    <img src="logo.png" alt="Touch Gold Logo">
-    <h1>Touch Gold Diamond Jewellery</h1>
-    <p class="tagline">Reliable Luxury, Every Time</p>
+    <img src="logo.png">
 </header>
 
-<nav>
-    <a href="#">Home</a>
-    <a href="#about">About</a>
-    <a href="#products">Products</a>
-    <a href="#contact">Contact</a>
-</nav>
+<!-- BANNER -->
+<div class="banner"></div>
 
-<section id="about" class="about">
-    <h2>About Us</h2>
-    <p>We offer premium quality diamond and silver jewellery designed for elegance, luxury, and daily wear. Touch Gold represents trust, quality, and timeless beauty.</p>
+<!-- FEATURES -->
+<section class="features">
+    <div class="feature">
+        <img src="feature1.jpg">
+        <h3>Premium Quality</h3>
+        <p>High quality jewellery crafted with perfection.</p>
+    </div>
+
+    <div class="feature">
+        <img src="feature2.jpg">
+        <h3>Luxury Design</h3>
+        <p>Elegant designs for modern lifestyle.</p>
+    </div>
+
+    <div class="feature">
+        <img src="feature3.jpg">
+        <h3>Trusted Brand</h3>
+        <p>Reliable luxury, every time.</p>
+    </div>
 </section>
 
-<section id="products" class="products">
+<!-- PRODUCT SLIDER -->
+<section class="slider">
+    <div class="slide-track">
+        <img src="slide1.jpg">
+        <img src="slide2.jpg">
+        <img src="slide3.jpg">
+        <img src="slide1.jpg">
+        <img src="slide2.jpg">
+    </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products">
     <h2>Our Products</h2>
-    <img src="product1.jpg">
-    <img src="product2.jpg">
-    <img src="product3.jpg">
+
+    <div class="product-box">
+        <img src="product1.jpg">
+        <h3>Gold Ring</h3>
+    </div>
+
+    <div class="product-box">
+        <img src="product2.jpg">
+        <h3>Silver Bangle</h3>
+    </div>
+
+    <div class="product-box">
+        <img src="product3.jpg">
+        <h3>Diamond Necklace</h3>
+    </div>
 </section>
 
-<section id="contact" class="contact">
+<!-- CONTACT -->
+<section class="contact">
     <h2>Contact Us</h2>
     <p>Email: info.touchgold@gmail.com</p>
     <p>WhatsApp: +91 9328630010</p>
@@ -144,13 +177,12 @@ a {
 
     <br><br>
 
-    <a href="https://instagram.com/yourpage" target="_blank">
-        Visit Instagram
-    </a>
+    <button>Download Our App</button>
 </section>
 
+<!-- FOOTER -->
 <footer>
-    <p>© 2026 Touch Gold Diamond Jewellery</p>
+    © Touch Gold & Diamond Jewellery
 </footer>
 
 </body>
